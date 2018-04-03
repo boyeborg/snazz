@@ -12,3 +12,6 @@ script:
   - yarn build
 notifications:
   email: false
+branches:
+  only: 
+    - master
