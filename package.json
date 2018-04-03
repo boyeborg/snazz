@@ -1,0 +1,8 @@
+{
+  "name": "snazz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:boyeborg/snazz.git",
+  "author": "Boye Borg <boye.borg@icloud.com>",
+  "license": "MIT"
+}
