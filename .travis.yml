@@ -1,17 +1,25 @@
 language: node_js
 node_js:
-  - "stable"
+  - stable
 cache:
   yarn: true
   directories:
-    - "node_modules"
+    - node_modules
 install:
   - yarn install
 script:
   - yarn test
   - yarn build
+deploy:
+  skip_cleanup: true
+  on:
+    branch: master
+  provider: firebase
+  token:
+    secure: "hEktLbK73plbaSsaxB4v03CzDv8Sss1lJoPlYGZvoz5ZCdf1O8BjKe/KYbjWllOCVudChHcrsQCk5m5n3J9tRBMjLdLGTFbuQUWuhMJquAxly4tqjKdlVAW4iILwAhEcK2fZSvzG/+9AwfB6fHqn+gr2jRvi6kDNwpEL1JBB7iMHcjMX4b2KdRaEHeksNKVU7RA8zB98ZYAA6TfLxocAs/nZuHKtkNcqDma24EGabYwzO5u92FOMZ7+TCgzZU0s/M/1t3RHrhfXEpsIv+kn/X4BhBruwqKfMRY/RHnCyLwEpnTahcSekG9rtRYCxUoasYePOzD0D0EH2Nh0F4zZCF3jksHWnlFq/Yi6pni90CM923/AQ+oDhjZWUE6ZNc4bxmMKTyBsTMokWLj4MKOTdeju3V62uCFWjnDNqoSYWMjes0JHQhdNmGYC0d+DtVI/ikKf5zWLIGc07nSLtCUpX6v1frEh++5QZVwxYXir0354Og3kZrItdKJvzAsxAU4YMspv0arQwo+SA2LpjUFIDwQPqbQYdgkAbHXgfOLyzaRGhBRwWEUowrQqYvy23fjJkDt8WZjg71zhyl/8im7D8COLqup6BKyvdoOKyLabYo52lYoZR+ylm/sSQpOsznaVb9IhiAs4/aj/Yu5MuFeqnZiWSa0XFnkB4ShQKnxOxuCs="
+  project: "snazz-90e7c"
 notifications:
   email: false
 branches:
-  only: 
+  only:
     - master
